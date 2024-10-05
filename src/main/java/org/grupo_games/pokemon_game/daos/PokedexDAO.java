@@ -7,37 +7,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PokedexDAO extends BaseDAO {
 
     // Método para agregar un nuevo Pokémon a la base de datos
 
-
-    // Método para obtener un Pokémon por su ID
-    public Pokemon obtenerPokemonPorId(int id) throws SQLException {
-        String sql = "SELECT * FROM Pokemon WHERE id = ?";
-        Pokemon pokemon = null;
-
-        try (Connection connection = obtenerConexion();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
-
-            statement.setInt(1, id);
-
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    String apodo = resultSet.getString("apodo");
-                    int nivel = resultSet.getInt("nivel");
-                    float salud = resultSet.getFloat("salud");
-
-                    pokemon = new Pokemon(id, apodo, nivel, salud);
-                }
-            }
-        }
-
-        return pokemon;
-    }
 
     // Método para actualizar un Pokémon existente
 
