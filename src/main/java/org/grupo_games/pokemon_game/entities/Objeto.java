@@ -1,6 +1,7 @@
 package org.grupo_games.pokemon_game.entities;
 
 public abstract class Objeto {
+    //Atributos
     private String nombre;
     private String descripcion;
     private int cantidad = 0;
