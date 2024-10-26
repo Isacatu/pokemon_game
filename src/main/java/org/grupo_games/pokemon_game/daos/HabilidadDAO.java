@@ -1,4 +1,15 @@
-public class HabilidadDAO {
+package org.grupo_games.pokemon_game.daos;
+
+import org.grupo_games.pokemon_game.db.BaseDAO;
+import org.grupo_games.pokemon_game.db.DatabaseConnection;
+import org.grupo_games.pokemon_game.entities.Entrenador;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class HabilidadDAO extends BaseDAO {
     private Connection conexion;
 
     // Constructor que establece la conexión
