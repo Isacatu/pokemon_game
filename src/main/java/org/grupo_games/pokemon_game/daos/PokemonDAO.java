@@ -14,7 +14,7 @@ public class PokemonDAO extends BaseDAO {
         try (Connection connection = obtenerConexion();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, pokemon.getApodo());
-            statement.setInt(2, pokemon.getNivel());
+            statement.setFloat(2, pokemon.getNivel());
             statement.setFloat(3, pokemon.getEntrenador().getId());
             statement.setInt(4, 0);
             statement.executeUpdate();
